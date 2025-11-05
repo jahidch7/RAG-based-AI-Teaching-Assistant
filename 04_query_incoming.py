@@ -34,8 +34,6 @@ incoming_query = input("Ask a Question: ")
 question_embedding = create_embedding([incoming_query])[0] 
 
 # Find similarities of question_embedding with other embeddings
-# print(np.vstack(df['embedding'].values))
-# print(np.vstack(df['embedding']).shape)
 similarities = cosine_similarity(np.vstack(df['embedding']), [question_embedding]).flatten()
 # print(similarities)
 top_results = 5
@@ -59,5 +57,3 @@ print(response)
 
 with open("response.txt", "w") as f:
     f.write(response)
-# for index, item in new_df.iterrows():
-#     print(index, item["title"], item["number"], item["text"], item["start"], item["end"])
