@@ -4,6 +4,7 @@
 # 4.created a dictionary with keys chunks and text
 # 5.Opens a new file for writing.The filename is dynamic, based on the variable audio from audios FileExistsError
 # 6.I dumped the dictioary into json file
+# 7. speech to text
 
 import whisper
 import json
